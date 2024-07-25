@@ -1,27 +1,26 @@
-# MontyHallFront
+# Monty Hall Problem Simulator- Frontend
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7.
+## Application Heading
+Monty Hall Problem Simulator
 
-## Development server
+## Application Description
+The Monty Hall Problem Simulator frontend is built using Angular. This application simulates the Monty Hall problem, a famous probability puzzle based on a game show scenario. The simulator allows users to specify the number of simulations and whether to switch doors, then displays the results including total games, wins, losses, and win percentage.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## App Screenshots
+![Image](docs/question.png)
 
-## Code scaffolding
+## How to Run the App
+To run the application, follow these steps:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. **Clone the Repository:**
+   ```bash
+   git clone <repository-url>
+   cd monty-hall-simulator
 
-## Build
+2. **Install Dependencies:**
+    ```bash
+    npm install
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+3. **Run the Application:**
+    ```bash
+    ng serve
