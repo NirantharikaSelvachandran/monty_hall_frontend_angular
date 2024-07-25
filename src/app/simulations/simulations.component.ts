@@ -42,7 +42,7 @@ export class SimulationsComponent {
     }
     setTimeout(() => {
       this.isLoading = false;
-    }, 400);
+    }, 1000);
   }
 
   showSuccessToast(): void {

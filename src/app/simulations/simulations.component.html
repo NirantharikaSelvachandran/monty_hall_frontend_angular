@@ -22,10 +22,12 @@
                 <button mat-raised-button color="primary" class="simulationbtn" type="submit"
                     [disabled]="isLoading">Start Simulation</button>
 
-                <mat-progress-bar *ngIf="isLoading" mode="indeterminate" class="progressBar"></mat-progress-bar>
+                
             </form>
         </mat-card-content>
     </mat-card>
+
+    <mat-progress-bar *ngIf="isLoading" mode="indeterminate" class="progressBar"></mat-progress-bar>
 
     <div *ngIf="result" >
         <h4>Results</h4>
