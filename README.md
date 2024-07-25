@@ -15,7 +15,7 @@ To run the application, follow these steps:
 1. **Clone the Repository:**
    ```bash
    git clone <repository-url>
-   cd monty-hall-simulator
+   cd monty_hall_frontend_angular
 
 2. **Install Dependencies:**
     ```bash
