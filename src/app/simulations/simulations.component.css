@@ -23,11 +23,27 @@
     width: 75%;
   }
 
-  .simulationbtn{
-    margin-bottom: 20px;
+  .button-container {
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+  }
+  
+  .button-container button {
+    margin-right: 10px;
+    width: 155px;
+  }
+  
+  .button-container button:last-child {
+    margin-right: 0;
   }
 
-  .progressBar{
+  .spinner-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; 
+    margin-top: 40px;
     margin-bottom: 10px;
   }
 

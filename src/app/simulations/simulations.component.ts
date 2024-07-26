@@ -45,6 +45,12 @@ export class SimulationsComponent {
     }, 1000);
   }
 
+  resetForm(): void {
+    this.games = 1000;
+    this.switchDoor = true;
+    this.result = null;
+  }
+
   showSuccessToast(): void {
     this.snackBar.open('Simulation completed successfully!', 'Close', {
       duration: 3000,
