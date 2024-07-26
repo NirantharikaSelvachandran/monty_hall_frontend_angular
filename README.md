@@ -24,3 +24,6 @@ To run the application, follow these steps:
 3. **Run the Application:**
     ```bash
     ng serve
+
+## App Output
+![Image!](projectAssets/web_page.PNG)
