@@ -4,27 +4,36 @@
             <mat-card-title>Monty Hall Simulator</mat-card-title>
         </mat-card-header>
         <mat-card-content>
-            <form (ngSubmit)="startSimulation()" class="mat-form-group">
+            <form (ngSubmit)="startSimulation()" #simulationForm="ngForm" class="mat-form-group">
 
                 <mat-form-field appearance="fill" class="formfield">
                     <mat-label>Number of Simulations</mat-label>
-                    <input matInput type="number" [(ngModel)]="games" name="games" required>
+                    <input matInput type="number" [(ngModel)]="games" name="games" required #gamesField="ngModel">
+                    <mat-error *ngIf="gamesField.invalid && (gamesField.dirty || gamesField.touched)">
+                        Number of simulations is required.
+                    </mat-error>
                 </mat-form-field><br>
 
                 <mat-form-field appearance="fill" class="formfield">
                     <mat-label>Switch Door</mat-label>
-                    <mat-select [(ngModel)]="switchDoor" name="switchDoor" required>
+                    <mat-select [(ngModel)]="switchDoor" name="switchDoor" required #switchDoorField="ngModel">
                         <mat-option [value]="true">Yes</mat-option>
                         <mat-option [value]="false">No</mat-option>
                     </mat-select>
+                    <mat-error *ngIf="switchDoorField.invalid && (switchDoorField.dirty || switchDoorField.touched)">
+                        Please select an option.
+                    </mat-error>
                 </mat-form-field><br>
 
                 <div class="button-container">
-                    <button mat-raised-button color="primary" class="simulationbtn" type="submit" [disabled]="isLoading">Start Simulation</button>
-                    <button mat-raised-button color="warn" type="button" (click)="resetForm()" [disabled]="isLoading">Reset</button>
+                    <button mat-raised-button color="primary" class="simulationbtn" type="submit"
+                        [disabled]="isLoading || simulationForm.invalid">Start Simulation</button>
+                    <button mat-raised-button color="warn" type="button" (click)="resetForm()"
+                        [disabled]="isLoading">Reset</button>
                 </div>
-                                   
+
             </form>
+
         </mat-card-content>
     </mat-card>
 
@@ -32,7 +41,7 @@
         <mat-spinner></mat-spinner>
     </div>
 
-    <div *ngIf="result" >
+    <div *ngIf="result">
         <h4>Results</h4>
         <div class="results-container">
             <mat-card class="result-card">
