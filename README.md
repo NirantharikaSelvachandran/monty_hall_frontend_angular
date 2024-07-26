@@ -26,4 +26,4 @@ To run the application, follow these steps:
     ng serve
 
 ## App Output
-![Image!](projectAssets/app_page.PNG)
+![Image!](projectAssets/web_page.PNG)
